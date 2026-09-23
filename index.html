@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initializing Love...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bg-music" src="music.mp3" loop></audio>
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+    <div class="container">
+        <section id="screen-1" class="screen active">
+            <div class="glass-card text-center">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">love_system.sh</span>
+                </div>
+                <div class="code-block">
+                    <p class="code-line"><span class="keyword">import</span> os, time</p>
+                    <p class="code-line"><span class="comment"># initializing_love.exe</span></p>
+                    <p class="code-line">loading memories... <span class="accent">[OK]</span></p>
+                    <p class="code-line">status: <span class="string">"you are my favorite person"</span></p>
+                </div>
+                <h1>для самого особенного человека в моей жизни <3 </h1>
+                <div id="loader" class="loader-container hidden">
+                    <div class="spinner"></div>
+                    <p class="code-text">Compiling feelings...</p>
+                </div>
+
+                <button id="btn-start" class="btn">запустить поздравление!!!</button>
+            </div>
+        </section>
+        <section id="screen-2" class="screen hidden">
+            <img src="photo.jpg" alt="мы" style="width:100%; max-width:250px; border-radius:12px; margin-bottom:15px;">
+            <div class="glass-card text-center">
+                <div class="heart-icon">❤️</div>
+                <p class="message-text">
+                    ты — человек, с которым даже самые сложные дни становятся проще
+                    спасибо, что ты есть в моей жизни :)
+                </p>
+                <button id="btn-to-puzzle" class="btn">далее <span class="arrow">→</span></button>
+            </div>
+        </section>
+        <section id="screen-3" class="screen hidden">
+            <div class="glass-card">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">security_check.js</span>
+                </div>
+                
+                <h2>защищенный сектор: исправь ошибку</h2>
+                <p class="hint-text">чтобы пройти дальше, верни в переменную правильное значение!</p>
+                
+                <div class="code-block-editor">
+                    <p class="code-line"><span class="keyword">const</span> coreValues = <span class="string">"love"</span>;</p>
+                    <p class="code-line"><span class="keyword">const</span> myFavoritePerson = <span class="keyword">null</span>; <span class="comment">// ⚠️ забагалось.. значение потеряно</span></p>
+                    <p class="code-line"><span class="comment">// подсказка: это имя того, у которого сегодня праздник, нооо с маленькой буквы) </span></p>
+                </div>
+
+                <div class="input-group">
+                    <span class="terminal-prefix">Fix bug ($myFavoritePerson = ):</span>
+                    <input type="text" id="puzzle-input" placeholder="введите ответ..." autocomplete="off">
+                </div>
+
+                <p id="puzzle-error" class="error-text hidden">❌ ты ошибся: неверный любимый человек. попробуй еще раз</p>
+                <p id="puzzle-success" class="success-text hidden">⚡ доступ разрешён. ты успешно взломал моё сердце</p>
+
+                <button id="btn-check-puzzle" class="btn">проверить код</button>
+                <button id="btn-to-final" class="btn hidden">войти в систему <span class="arrow">→</span></button>
+            </div>
+        </section>
+        <section id="screen-4" class="screen hidden">
+            <div id="hearts-container"></div>
+            <div class="glass-card text-center final-card">
+                <h1 class="glow-text">с 19-летием, лап</h1>
+                <div class="final-message">
+                    <p>ты - самый теплый человек, который своей теплотой окружает и дает другим людям сиять</p>
+                    <p>спасибо за твою заботу, потрясающее чувство юмора, поддержку и за то, что делаешь мою жизнь счастливее каждый день :)</p>
+                    <p class="highlight-text">я люблю тебя больше, чем ты любишь кодить на питоне</p>
+                </div>
+                <div class="love-question-box">
+                    <p>ты меня любишь?</p>
+                    <div class="question-buttons">
+                        <button id="btn-love-yes" class="btn btn-small">да, конечно!</button>
+                        <button id="btn-love-no" class="btn btn-small btn-secondary">нет</button>
+                    </div>
+                </div>
+                <p class="signature">твоя котя<3</p>
+                <button id="btn-start-memories" class="btn" style="margin-top: 20px;">начать пробуждение воспоминаний?</button>
+                <div id="memory-timeline" class="hidden-terminal hidden">
+                    <div id="mem-card-1" class="mem-card">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="terminal-title">system_init_love.log</span>
+                        </div>
+                        <div class="code-block" style="text-align: left;">
+                            <p class="accent"># событие 1 // 13 февраля 2026</p>
+                            <p class="message-text">начало отношений в пятницу 13 в феврале 2026</p>
+                            <p class="comment">самый счастливый сбой в матрице во вселенной, хаха</p>            
+                            <div class="easter-egg">
+                                <span class="egg-trigger">/* обнаружен скрытый лог от 19 февраля */</span>
+                                <div class="egg-content">первый подарок с одним моим волоском хаха // заархивировано на память</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-small btn-next-mem" data-next="2">инициализировать следующее воспоминание →</button>
+                    </div>
+                    <div id="mem-card-2" class="mem-card hidden">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="terminal-title">sleep_mode_disabled.js</span>
+                        </div>
+                        <div class="code-block" style="text-align: left;">
+                            <p class="accent"># событие 2 // 1 марта 2026</p>
+                            <p class="message-text">наша первая ночевка</p>
+                            <div class="interactive-interactive">
+                                <p class="comment">система переведена в режим максимального уюта</p>
+                                <button class="btn btn-small btn-secondary" onclick="alert('ошибка: уровень милоты превысил лимиты сервера процессора')">проверить уровень тепла</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-small btn-next-mem" data-next="3">загрузить память дальше →</button>
+                    </div>
+                    <div id="mem-card-3" class="mem-card hidden">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="terminal-title">geolocation_shukinskaya.sh</span>
+                        </div>
+                        <div class="code-block" style="text-align: left;">
+                            <p class="accent"># событие 3 // локация: метро щукинская</p>
+                            <p class="message-text">наша незабываемая прогулка</p>
+                            <p class="string">маршрут построен прямо в мое сердце</p>
+                        </div>
+                        <button class="btn btn-small btn-next-mem" data-next="4">компилировать дальше →</button>
+                    </div>
+                    <div id="mem-card-4" class="mem-card hidden">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="terminal-title">actions_speak_louder.py</span>
+                        </div>
+                        <div class="code-block" style="text-align: left;">
+                            <p class="accent"># событие 4 // бесконечный цикл признаний</p>
+                            <p class="message-text">каждое "я люблю тебя", сказанное в действиях, и комплимент</p>
+                            <p class="keyword">while true:</p>
+                            <p class="string">&nbsp;&nbsp;&nbsp;&nbsp;print("ты самый лучший программист и парень в мире")</p>    
+                        </div>
+                        <button class="btn btn-small btn-next-mem" data-next="5">получить последний пакет данных →</button>
+                    </div>
+                    <div id="mem-card-5" class="mem-card hidden">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="terminal-title">birthday_gifts_prod.env</span>
+                        </div>   
+                        <div class="code-block" style="text-align: left;">
+                            <p class="accent"># событие 5 // лучший день рождения</p>
+                            <p class="message-text">твои прекрасные подарки на мой др: букет цветов и духи, а также наше времяпрепровождение</p>
+                            <p class="comment">до сих пор чувствую этот аромат и твою заботу</p>
+                        </div> 
+                        <button class="btn btn-small btn-next-mem" data-next="6">завершить сессию воспоминаний →</button>
+                    </div>
+                    <div id="mem-card-6" class="mem-card hidden">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="terminal-title">total_future_success.log</span>
+                        </div>
+                        <div class="code-block text-center">
+                            <p class="string" style="font-size: 16px; font-weight: bold;">впереди еще больше запоминающихся моментов и маленьких, и больших</p>
+                            <p class="accent" style="margin-top: 10px; font-size: 18px;">и это все только начало</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="btn-restart" class="btn btn-restart" style="margin-top: 30px;">запустить еще раз 🔄</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
